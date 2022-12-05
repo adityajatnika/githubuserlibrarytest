@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.lang.Boolean
 
-class ApiConfig {
+class ApiGithubConfig {
     companion object{
         fun getApiService(): ApiService {
             val loggingInterceptor = if(Boolean.parseBoolean("true")) {
