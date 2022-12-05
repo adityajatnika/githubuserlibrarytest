@@ -65,7 +65,11 @@ See also
 
 ## Features
 ### GetUsers
-In this features provides you to get all data list data user in Github only
+In this features provides you to get all data list data users in Github only
+##### Syntax :
+```kotlin
+ApiGithubConfig.ApiService().getUsers(token)
+```
 ##### Output :
 ```
 AvatarUrl User
