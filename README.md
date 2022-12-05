@@ -148,5 +148,10 @@ Public Repositories
 UserName
 ```
 ## How it Works
+- A Configuration API is defined in the library to capture the github base url
+- API Service is also included which contains calls to retrofit using endpoints
+- Calling data through the RESTFull API, of course, requires a response related to the endpoint
+- The response has been defined in the library, there is a UserResponse for calling the Github user list, and a DetailUserResponse for calling Github user details
+- The client just needs to call retrofit in the viewmodel and determine its onSuccess and onFailure using the logic in each project.
 ## Resource
 [Github API QUICKGUIDE](https://docs.github.com/en/get-started)
