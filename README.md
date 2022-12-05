@@ -55,7 +55,7 @@ fun getListUser(query: String = "") {
   isLoading.postValue(true)
   if(query.isEmpty()) {
     val client = ApiConfig.getApiService().getUsers(BuildConfig.API_TOKEN) // <-- 1. Add this function (code import from library) 
-    client.enqueue(object : Callback<List<UserResponse>> { <-- 2. Add some retrofit call in enqueue (User Response import from library)
+    client.enqueue(object : Callback<List<UserResponse>> { // <-- 2. Add some retrofit call in enqueue (UserResponse import from library)
       override fun onResponse(
         call: Call<List<UserResponse>>,
         response: Response<List<UserResponse>>
