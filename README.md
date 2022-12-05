@@ -1,0 +1,57 @@
+# Github Users Library
+This repository is made to publish libraries or dependencies that can be used to get data lists and Github user details on Android Studio projects.
+
+## Advantage
+✅ Simplify to get github user from API   
+✅ Code Eficiency   
+✅ No more define API Config    
+✅ No more define API service   
+✅ No more define Repository Data   
+
+## Developer 
+| Nama | NIM |
+| --- | --- |
+| Prasetya Naufal Rahmandita | 195150401111035 |
+| Aditya Akhmad Dinan Jatnika | 195150401111025 |
+| Mohammad Aditya Putra | 195150400111054 |
+| Ronaldo Simatupang | 195150400111015 |
+| Hendika Fashobiqul Galang F. | 195150400111024 |
+
+## System Requirement (Recomendation / Tested)
+- Android Studio Dolphin | 2021.3.1 Patch 1
+- Kotlin Plugin Version : 213-1.7.20
+- Android Gradle Plugin Version : 7.3.1
+- Gradle Version : 7.4
+- Compile SDK Version : 32 
+- Java 8
+
+## Tested on Devices
+✅ Samsung Galaxy A03S   
+✅ Samsung Galaxy A20S
+
+## How to Use
+#### Step 1 : Add the JitPack repository to your build file
+```
+allprojects {
+  repositories {
+    ...
+      maven { url 'https://jitpack.io' }
+     }
+  }    
+```
+
+#### Step 2 : Add the dependency
+```
+dependencies {
+  implementation 'com.github.adityajatnika:githubuserslibrary:Tag'
+}
+```
+  
+That's it! The first time you request a project JitPack checks out the code, builds it and serves the build artifacts (jar, aar).   
+If the project doesn't have any GitHub Releases you can use the short commit hash or 'master-SNAPSHOT' as the version.
+
+See also
+
+[Documentation](https://docs.jitpack.io/)  
+[Private Repositories](https://jitpack.io/private#auth)   
+[Immutable Artifacts](https://docs.jitpack.io/#immutable-artifacts)   
