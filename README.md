@@ -32,7 +32,7 @@ This repository is made to publish libraries or dependencies that can be used to
 ## How to Use
 #### Step 1 : Add the JitPack repository to your build file
 
-```
+```gradle
 allprojects {
   repositories {
     ...
