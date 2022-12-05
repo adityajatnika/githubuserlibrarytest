@@ -71,11 +71,11 @@ In this features provides you to get all data list data users in Github only
 ApiGithubConfig.ApiService().getUsers(token)
 ```
 ##### Output :
-```
-AvatarUrl User
-id
-userName
-```
+| Name | Type | Variabel |
+| --- | --- | --- |
+| AvatarUrl User | String | avatarUrl |
+| ID | Int | id |
+| UserName | String | login |
 ### GetFollower
 In this features provides you to get the number of follower based on the selected account
 ##### Syntax :
@@ -83,9 +83,9 @@ In this features provides you to get the number of follower based on the selecte
 ApiGithubConfig.ApiService().getFollowers(token, query)
 ```
 ##### Output :
-```
-Number of Follower
-```
+| Name | Type | Variabel |
+| --- | --- | --- |
+| Number of Follower | Int | followers |
 ### GetFollowing
 In this features provides you to get the number of following based on the selected account 
 ##### Syntax :
@@ -93,9 +93,9 @@ In this features provides you to get the number of following based on the select
 ApiGithubConfig.ApiService().getFollowing(token, query)
 ```
 ##### Output :
-```
-Number of Following
-```
+| Name | Type | Variabel |
+| --- | --- | --- |
+| Number of Following | Int | following |
 ### GetDetailUser
 In this features provides you to get the detail of account that you choose 
 ##### Syntax :
@@ -103,17 +103,17 @@ In this features provides you to get the detail of account that you choose
 ApiGithubConfig.ApiService().getDetailUser(token, query)
 ```
 ##### Output :
-```
-Number of following
-Number of follower
-AvatarUrl User
-Name
-Company
-Location
-ID
-Public Repositories
-UserName
-```
+| Name | Type | Variabel |
+| --- | --- | --- |
+| Number of Followers | Int | followers |
+| AvatarUrl User | String | avatarUrl |
+| Number of Following | Int | following |
+| Name | String | name |
+| Company | String | company |
+| Location | String | location |
+| ID | Int | id |
+| Public Repositories | int | publicRepos |
+| UserName | String | login |
 ## How it Works
 ## Resource
 [Github API QUICKGUIDE](https://docs.github.com/en/get-started)
