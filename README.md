@@ -72,17 +72,17 @@ fun getListUser(query: String = "") {
             ResponseStatus.FORBIDDEN.stat -> "$statusCode : Forbidden"
             ResponseStatus.NOT_FOUND.stat -> "$statusCode : Not Found"
             else -> "$statusCode"
+          }
+          Log.e(TAG, errorMessage)
         }
-        Log.e(TAG, errorMessage)
       }
-    }
-    override fun onFailure(call: Call<List<UserResponse>>, t: Throwable) {
-      isLoading.postValue(false)
-      stringError.postValue(t.message)
-      Log.e(TAG, t.message.toString())
-      t.printStackTrace()
-    }
-  })
+      override fun onFailure(call: Call<List<UserResponse>>, t: Throwable) {
+        isLoading.postValue(false)
+        stringError.postValue(t.message)
+        Log.e(TAG, t.message.toString())
+        t.printStackTrace()
+      }
+    })
   }
 }
 ```
