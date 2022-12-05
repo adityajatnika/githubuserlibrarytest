@@ -1,6 +1,5 @@
-package com.example.testlibrarygit.retrofit
+package com.example.githubusertest.retrofit
 
-import com.example.githubusertest.retrofit.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
