@@ -64,5 +64,39 @@ See also
 [Immutable Artifacts](https://docs.jitpack.io/#immutable-artifacts)   
 
 ## Features
+### GetUsers
+In this features provides you to get all data list data user in Github only
+##### Output :
+```
+AvatarUrl User
+id
+userName
+```
+### GetFollower
+In this features provides you to get the number of follower based on the selected account
+##### Output :
+```
+Number of Follower
+```
+### GetFollowing
+In this features provides you to get the number of following based on the selected account 
+##### Output :
+```
+Number of Following
+```
+### GetDetailUser
+In this features provides you to get the detail of account that you choose 
+##### Output :
+```
+Number of following
+Number of follower
+AvatarUrl User
+Name
+Company
+Location
+ID
+Public Repositories
+UserName
+```
 ## How it Works
 ## Resource
