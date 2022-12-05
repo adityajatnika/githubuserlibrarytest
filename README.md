@@ -31,6 +31,7 @@ This repository is made to publish libraries or dependencies that can be used to
 
 ## How to Use
 #### Step 1 : Add the JitPack repository to your build file
+
 ```
 allprojects {
   repositories {
@@ -46,6 +47,12 @@ dependencies {
   implementation 'com.github.adityajatnika:githubuserslibrary:Tag'
 }
 ```
+
+#### Step 3 : Choose The Feature
+Example :
+```
+
+```
   
 That's it! The first time you request a project JitPack checks out the code, builds it and serves the build artifacts (jar, aar).   
 If the project doesn't have any GitHub Releases you can use the short commit hash or 'master-SNAPSHOT' as the version.
@@ -55,3 +62,7 @@ See also
 [Documentation](https://docs.jitpack.io/)  
 [Private Repositories](https://jitpack.io/private#auth)   
 [Immutable Artifacts](https://docs.jitpack.io/#immutable-artifacts)   
+
+## Features
+## How it Works
+## Resource
