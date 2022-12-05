@@ -78,18 +78,30 @@ userName
 ```
 ### GetFollower
 In this features provides you to get the number of follower based on the selected account
+##### Syntax :
+```kotlin
+ApiGithubConfig.ApiService().getFollowers(token, query)
+```
 ##### Output :
 ```
 Number of Follower
 ```
 ### GetFollowing
 In this features provides you to get the number of following based on the selected account 
+##### Syntax :
+```kotlin
+ApiGithubConfig.ApiService().getFollowing(token, query)
+```
 ##### Output :
 ```
 Number of Following
 ```
 ### GetDetailUser
 In this features provides you to get the detail of account that you choose 
+##### Syntax :
+```kotlin
+ApiGithubConfig.ApiService().getDetailUser(token, query)
+```
 ##### Output :
 ```
 Number of following
