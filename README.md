@@ -31,7 +31,7 @@ This repository is made to publish libraries or dependencies that can be used to
 
 ## How to Use
 #### Step 1 : Add the JitPack repository to your build file
-
+Add it in your root build.gradle at the end of repositories:
 ```gradle
 allprojects {
   repositories {
@@ -50,8 +50,41 @@ dependencies {
 
 #### Step 3 : Choose The Feature
 Example :
-```
-
+```kotlin
+fun getListUser(query: String = "") {
+  isLoading.postValue(true)
+  if(query.isEmpty()) {
+    val client = ApiConfig.getApiService().getUsers(BuildConfig.API_TOKEN) // <-- 1. Add this function (code import from library) 
+    client.enqueue(object : Callback<List<UserResponse>> { <-- 2. Add some retrofit call in enqueue (User Response import from library)
+      override fun onResponse(
+        call: Call<List<UserResponse>>,
+        response: Response<List<UserResponse>>
+      ) {
+        isLoading.postValue(false)
+        if (response.isSuccessful) {
+          val responseBody = response.body()
+          if (responseBody != null) {
+            setListUser(responseBody)
+          }
+        } else {
+          val errorMessage = when (val statusCode = response.code()) {
+            ResponseStatus.BAD_REQUEST.stat -> "$statusCode : Bad Request"
+            ResponseStatus.FORBIDDEN.stat -> "$statusCode : Forbidden"
+            ResponseStatus.NOT_FOUND.stat -> "$statusCode : Not Found"
+            else -> "$statusCode"
+        }
+        Log.e(TAG, errorMessage)
+      }
+    }
+    override fun onFailure(call: Call<List<UserResponse>>, t: Throwable) {
+      isLoading.postValue(false)
+      stringError.postValue(t.message)
+      Log.e(TAG, t.message.toString())
+      t.printStackTrace()
+    }
+  })
+  }
+}
 ```
   
 That's it! The first time you request a project JitPack checks out the code, builds it and serves the build artifacts (jar, aar).   
